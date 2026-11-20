@@ -4,7 +4,7 @@ A small, reproducible **retrieval** benchmark for a hybrid RAG pipeline in TypeS
 
 It runs entirely in-process on [PGlite](https://pglite.dev) (WASM Postgres) with the pgvector extension, so there is no database to set up. It measures what lands in the 8-passage context window. It does **not** generate or grade answers.
 
-The pipeline is extracted from a private production RAG system I built. This repository keeps the retrieval core and its benchmark methodology and removes everything product-specific (see [How this differs from production](#how-this-differs-from-production)).
+The pipeline is extracted from the RAG pipeline of a private agent platform I'm building (currently an invite-only beta). This repository keeps the retrieval core and its benchmark methodology and removes everything product-specific (see [How this differs from the source system](#how-this-differs-from-the-source-system)).
 
 ## Pipeline
 
@@ -41,7 +41,7 @@ flowchart LR
 | `fts-only` | full-text top 32 → dedup → top 8 |
 | `hybrid-rrf` | RRF top 32 → dedup → top 8 |
 | `hybrid-rrf+rerank` | RRF top 32 → dedup → rerank → top 8 |
-| `hybrid-rrf+rerank-preserve8` | Every distinct passage from the hybrid top 8 is kept; the reranker only reorders them and fills slots freed by duplicates. This is the policy the production system shipped after pure reranking lost a source on a comparison question. It reuses the same rerank call, so it costs nothing extra. |
+| `hybrid-rrf+rerank-preserve8` | Every distinct passage from the hybrid top 8 is kept; the reranker only reorders them and fills slots freed by duplicates. This is the policy the source system adopted after pure reranking lost a source on a comparison question (there, reranking is implemented but off by default). It reuses the same rerank call, so it costs nothing extra. |
 
 ### Metrics
 
@@ -183,7 +183,7 @@ Live runs on **2026-11-20**. Code revision `a995099`, clean tree. Embeddings `vo
 ### What the numbers say, and what they don't
 
 - **The synthetic sets are near the ceiling.** With 5–10 answerable questions per split, one question moves a mean by 0.1–0.2. These sets are regression tests for specific failure modes, not a measure of general quality.
-- **Pure reranking repeats a known failure.** On both synthetic sets, the Brisa B22 vs. Aurora A17 warranty comparison needs two passages. `hybrid-rrf` had both in its top 8. `rerank-2.5-lite` moved the Brisa passage to rank 1 but filled the next slots with similar-looking catalogue distractors and dropped the Aurora passage (Recall@8 1.0 → 0.5 on that question). That is the whole Recall@8 drop shown in bold. The production system hit the same failure, which is why it ships `preserve8`. That policy keeps every distinct hybrid top-8 passage and lets the reranker only reorder them. On these sets, preserve8 kept full recall and still improved MRR/nDCG.
+- **Pure reranking repeats a known failure.** On both synthetic sets, the Brisa B22 vs. Aurora A17 warranty comparison needs two passages. `hybrid-rrf` had both in its top 8. `rerank-2.5-lite` moved the Brisa passage to rank 1 but filled the next slots with similar-looking catalogue distractors and dropped the Aurora passage (Recall@8 1.0 → 0.5 on that question). That is the whole Recall@8 drop shown in bold. The source system's own benchmark hit the same failure, which is why its reranking uses `preserve8`. That policy keeps every distinct hybrid top-8 passage and lets the reranker only reorder them. On these sets, preserve8 kept full recall and still improved MRR/nDCG.
 - **On SciFact held-out, reranking slightly hurt.** MRR@8 went 0.832 → 0.812 and nDCG@8 0.848 → 0.839, with Recall@8 unchanged at 0.920. This comes down to two questions in opposite directions:
   - claim 303: rerank recovered an abstract that hybrid had ranked below 8th (Recall 0 → 1);
   - claim 1110: rerank pushed the relevant abstract out of the top 8 (Recall 1 → 0);
@@ -197,15 +197,15 @@ Live runs on **2026-11-20**. Code revision `a995099`, clean tree. Embeddings `vo
 - **SciFact chunking crowds the context.** With 600-character chunks, one abstract often takes 3–5 of the 8 slots, which limits how many distinct abstracts fit. Repeated chunks earn no extra credit but do take positions. This was forced by the free-tier 10K tokens/min limit on rerank requests.
 - **Ineligible passages returned: 0** in every mode and run. The ineligible-source questions are listed with the no-evidence questions in each `summary.md`.
 
-## How this differs from production
+## How this differs from the source system
 
-The production system wraps this same retrieval core in machinery that is out of scope for a benchmark and has been removed:
+The source system wraps this same retrieval core in machinery that is out of scope for a benchmark and has been removed:
 
 - **Tenancy and permissions.** Row-level security, per-workspace isolation, collection selection, document versioning and revocation are re-checked immediately before every provider call. Here they are reduced to a single `eligible` boolean filter.
 - **Job leases and heartbeats** for long-running worker jobs.
 - **A budget broker** that reserves and settles provider spend per workspace and per execution path. Here it is reduced to one per-run hard cap.
 - **Answer generation**, citation checks and abstention grading. This benchmark is retrieval-only.
-- Production embeds the conversation's bounded follow-up context into the retrieval query. Here every question is standalone.
+- The source system embeds the conversation's bounded follow-up context into the retrieval query. Here every question is standalone.
 
 ## Licence
 
