@@ -1,0 +1,247 @@
+{
+  "capMicrousd": 250000,
+  "operations": [
+    {
+      "seq": 1,
+      "kind": "embed",
+      "model": "voyage-4",
+      "inputs": 19,
+      "ceilingTokens": 2152,
+      "reservedMicrousd": 130,
+      "status": "settled",
+      "tokens": 251,
+      "actualMicrousd": 16
+    },
+    {
+      "seq": 2,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 10303,
+      "reservedMicrousd": 207,
+      "status": "settled",
+      "tokens": 2412,
+      "actualMicrousd": 49
+    },
+    {
+      "seq": 3,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 10388,
+      "reservedMicrousd": 208,
+      "status": "settled",
+      "tokens": 2407,
+      "actualMicrousd": 49
+    },
+    {
+      "seq": 4,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 9982,
+      "reservedMicrousd": 200,
+      "status": "settled",
+      "tokens": 2368,
+      "actualMicrousd": 48
+    },
+    {
+      "seq": 5,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 10480,
+      "reservedMicrousd": 210,
+      "status": "settled",
+      "tokens": 2369,
+      "actualMicrousd": 48
+    },
+    {
+      "seq": 6,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 9983,
+      "reservedMicrousd": 200,
+      "status": "settled",
+      "tokens": 2402,
+      "actualMicrousd": 49
+    },
+    {
+      "seq": 7,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 10137,
+      "reservedMicrousd": 203,
+      "status": "settled",
+      "tokens": 2213,
+      "actualMicrousd": 45
+    },
+    {
+      "seq": 8,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 10243,
+      "reservedMicrousd": 205,
+      "status": "settled",
+      "tokens": 2350,
+      "actualMicrousd": 47
+    },
+    {
+      "seq": 9,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 10238,
+      "reservedMicrousd": 205,
+      "status": "settled",
+      "tokens": 2368,
+      "actualMicrousd": 48
+    },
+    {
+      "seq": 10,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 10350,
+      "reservedMicrousd": 207,
+      "status": "settled",
+      "tokens": 2360,
+      "actualMicrousd": 48
+    },
+    {
+      "seq": 11,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 10983,
+      "reservedMicrousd": 220,
+      "status": "settled",
+      "tokens": 2465,
+      "actualMicrousd": 50
+    },
+    {
+      "seq": 12,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 10432,
+      "reservedMicrousd": 209,
+      "status": "settled",
+      "tokens": 2611,
+      "actualMicrousd": 53
+    },
+    {
+      "seq": 13,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 10538,
+      "reservedMicrousd": 211,
+      "status": "settled",
+      "tokens": 2321,
+      "actualMicrousd": 47
+    },
+    {
+      "seq": 14,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 10875,
+      "reservedMicrousd": 218,
+      "status": "settled",
+      "tokens": 2660,
+      "actualMicrousd": 54
+    },
+    {
+      "seq": 15,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 10381,
+      "reservedMicrousd": 208,
+      "status": "settled",
+      "tokens": 2510,
+      "actualMicrousd": 51
+    },
+    {
+      "seq": 16,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 9517,
+      "reservedMicrousd": 191,
+      "status": "settled",
+      "tokens": 2213,
+      "actualMicrousd": 45
+    },
+    {
+      "seq": 17,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 10723,
+      "reservedMicrousd": 215,
+      "status": "settled",
+      "tokens": 2552,
+      "actualMicrousd": 52
+    },
+    {
+      "seq": 18,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 10377,
+      "reservedMicrousd": 208,
+      "status": "settled",
+      "tokens": 2292,
+      "actualMicrousd": 46
+    },
+    {
+      "seq": 19,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 11194,
+      "reservedMicrousd": 224,
+      "status": "settled",
+      "tokens": 2650,
+      "actualMicrousd": 53
+    },
+    {
+      "seq": 20,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 32,
+      "ceilingTokens": 10774,
+      "reservedMicrousd": 216,
+      "status": "settled",
+      "tokens": 2440,
+      "actualMicrousd": 49
+    },
+    {
+      "seq": 21,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 9935,
+      "reservedMicrousd": 199,
+      "status": "settled",
+      "tokens": 2357,
+      "actualMicrousd": 48
+    },
+    {
+      "seq": 22,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 10547,
+      "reservedMicrousd": 211,
+      "status": "settled",
+      "tokens": 2545,
+      "actualMicrousd": 51
+    }
+  ]
+}

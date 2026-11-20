@@ -1,0 +1,203 @@
+{
+  "capMicrousd": 250000,
+  "operations": [
+    {
+      "seq": 1,
+      "kind": "embed",
+      "model": "voyage-4",
+      "inputs": 51,
+      "ceilingTokens": 13092,
+      "reservedMicrousd": 786,
+      "status": "settled",
+      "tokens": 2919,
+      "actualMicrousd": 176
+    },
+    {
+      "seq": 2,
+      "kind": "embed",
+      "model": "voyage-4",
+      "inputs": 16,
+      "ceilingTokens": 2248,
+      "reservedMicrousd": 135,
+      "status": "settled",
+      "tokens": 341,
+      "actualMicrousd": 21
+    },
+    {
+      "seq": 3,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 10850,
+      "reservedMicrousd": 217,
+      "status": "settled",
+      "tokens": 2661,
+      "actualMicrousd": 54
+    },
+    {
+      "seq": 4,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 32,
+      "ceilingTokens": 10699,
+      "reservedMicrousd": 214,
+      "status": "settled",
+      "tokens": 2417,
+      "actualMicrousd": 49
+    },
+    {
+      "seq": 5,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 10892,
+      "reservedMicrousd": 218,
+      "status": "settled",
+      "tokens": 2605,
+      "actualMicrousd": 53
+    },
+    {
+      "seq": 6,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 32,
+      "ceilingTokens": 10687,
+      "reservedMicrousd": 214,
+      "status": "settled",
+      "tokens": 2426,
+      "actualMicrousd": 49
+    },
+    {
+      "seq": 7,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 10739,
+      "reservedMicrousd": 215,
+      "status": "settled",
+      "tokens": 2618,
+      "actualMicrousd": 53
+    },
+    {
+      "seq": 8,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 11619,
+      "reservedMicrousd": 233,
+      "status": "settled",
+      "tokens": 2786,
+      "actualMicrousd": 56
+    },
+    {
+      "seq": 9,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 32,
+      "ceilingTokens": 11290,
+      "reservedMicrousd": 226,
+      "status": "settled",
+      "tokens": 2657,
+      "actualMicrousd": 54
+    },
+    {
+      "seq": 10,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 32,
+      "ceilingTokens": 11010,
+      "reservedMicrousd": 221,
+      "status": "settled",
+      "tokens": 2518,
+      "actualMicrousd": 51
+    },
+    {
+      "seq": 11,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 11421,
+      "reservedMicrousd": 229,
+      "status": "settled",
+      "tokens": 2661,
+      "actualMicrousd": 54
+    },
+    {
+      "seq": 12,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 12151,
+      "reservedMicrousd": 244,
+      "status": "settled",
+      "tokens": 2968,
+      "actualMicrousd": 60
+    },
+    {
+      "seq": 13,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 11462,
+      "reservedMicrousd": 230,
+      "status": "settled",
+      "tokens": 2670,
+      "actualMicrousd": 54
+    },
+    {
+      "seq": 14,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 11139,
+      "reservedMicrousd": 223,
+      "status": "settled",
+      "tokens": 2670,
+      "actualMicrousd": 54
+    },
+    {
+      "seq": 15,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 12231,
+      "reservedMicrousd": 245,
+      "status": "settled",
+      "tokens": 3057,
+      "actualMicrousd": 62
+    },
+    {
+      "seq": 16,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 11769,
+      "reservedMicrousd": 236,
+      "status": "settled",
+      "tokens": 2649,
+      "actualMicrousd": 53
+    },
+    {
+      "seq": 17,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 31,
+      "ceilingTokens": 10729,
+      "reservedMicrousd": 215,
+      "status": "settled",
+      "tokens": 2509,
+      "actualMicrousd": 51
+    },
+    {
+      "seq": 18,
+      "kind": "rerank",
+      "model": "rerank-2.5-lite",
+      "inputs": 32,
+      "ceilingTokens": 10647,
+      "reservedMicrousd": 213,
+      "status": "settled",
+      "tokens": 2528,
+      "actualMicrousd": 51
+    }
+  ]
+}
