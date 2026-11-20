@@ -1,0 +1,9 @@
+node_modules/
+.env
+.env.*
+!.env.example
+# Benchmark run output and embedding cache (local only; curated reports live in reports/)
+runs/
+.cache/
+# Downloaded third-party datasets are untrusted and not redistributed here
+data/external/

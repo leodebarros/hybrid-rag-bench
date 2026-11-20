@@ -1,0 +1,28 @@
+{
+  "name": "hybrid-rag-bench",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Reproducible retrieval benchmark: pgvector + Postgres full-text search, reciprocal rank fusion and Voyage reranking, on PGlite.",
+  "license": "MIT",
+  "author": "Leonardo De Barros",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "pnpm@11.21.0",
+  "scripts": {
+    "bench": "tsx src/cli.ts",
+    "download:scifact": "tsx scripts/download-scifact.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test \"test/**/*.test.ts\""
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "0.5.8",
+    "@electric-sql/pglite-pgvector": "0.0.9"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.2",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3"
+  }
+}
