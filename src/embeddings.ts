@@ -76,7 +76,7 @@ export function voyageEmbedder(ctx: VoyageContext, cachePath: string | null, log
         cache.save()
         stats.apiInputs += inputs.length
         stats.apiRequests++
-        log(`  embedded ${stats.apiInputs} ${inputType} inputs via API (${stats.apiRequests} requests)`)
+        log(`  embedded ${inputs.length} ${inputType} inputs (run total: ${stats.apiInputs} inputs, ${stats.apiRequests} requests)`)
         batch = []
       }
       for (const key of missing) {
